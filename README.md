@@ -2,14 +2,14 @@
 
 
 [![image](https://img.shields.io/pypi/v/utm_epsg_finder.svg)](https://pypi.python.org/pypi/utm_epsg_finder)
-
+[![image](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/MIT)
 
 **Find the EPSG code**
 
 
--   Free software: MIT license
--   Documentation: https://MaxDragonheart.github.io/utm_epsg_finder
-    
+-   Free software: [MIT license](https://opensource.org/license/MIT)
+-   Documentation: TODO
+
 
 ## Features
 
