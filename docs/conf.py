@@ -60,7 +60,7 @@ html_theme = "alabaster"
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    "github_user": "MaxDragonheart",
+    "github_user": "GIS-Consultant",
     "github_repo": "utm-epsg-finder",
     "github_banner": True,
     "show_related": False,

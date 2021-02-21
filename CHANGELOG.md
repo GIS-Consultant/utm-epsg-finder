@@ -11,5 +11,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - First release on PyPI.
 
-[Unreleased]: https://github.com/MaxDragonheart/utm-epsg-finder/compare/v0.0.2...HEAD
-[0.0.2]: https://github.com/MaxDragonheart/utm-epsg-finder/compare/releases/tag/v0.0.2
+[Unreleased]: https://github.com/GIS-Consultant/utm-epsg-finder/compare/v0.0.2...HEAD
+[0.0.2]: https://github.com/GIS-Consultant/utm-epsg-finder/compare/releases/tag/v0.0.2

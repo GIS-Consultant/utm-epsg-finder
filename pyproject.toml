@@ -2,12 +2,12 @@
 [tool.poetry]
 name = "utm-epsg-finder"
 version = "0.0.2"
-description = "Python Boilerplate contains all the boilerplate you need to create a modern Python package."
+description = "Find UTM EPSG code from any geometry."
 authors = ["Massimiliano Moraca <info@massimilianomoraca.it>"]
 
 readme = "README.md"
-homepage = "https://github.com/MaxDragonheart/utm-epsg-finder"
-repository = "https://github.com/MaxDragonheart/utm-epsg-finder"
+homepage = "https://github.com/GIS-Consultant/utm-epsg-finder"
+repository = "https://github.com/GIS-Consultant/utm-epsg-finder"
 documentation = "https://utm-epsg-finder.readthedocs.io"
 keywords = ["utm-epsg-finder"]
 classifiers=[
@@ -26,7 +26,7 @@ classifiers=[
 
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/MaxDragonheart/utm-epsg-finder/issues"
+"Bug Tracker" = "https://github.com/GIS-Consultant/utm-epsg-finder/issues"
 
 
 
@@ -38,6 +38,8 @@ utm-epsg-finder = 'utm_epsg_finder.cli:main'
 python = "<3.10,>=3.6.1"
 
 click = "^7.1.2"
+geopandas = "^0.8.2"
+utm = "^0.7.0"
 
 
 [tool.poetry.dev-dependencies]
