@@ -1,6 +1,5 @@
-========
-Contents
-========
+Welcome to UTM EPSG Finder's documentation!
+===========================================================
 
 .. toctree::
    :maxdepth: 2
@@ -8,14 +7,19 @@ Contents
    readme
    installation
    usage
-   reference/index
-   contributing
-   authors
+   modules
    changelog
 
 Indices and tables
 ==================
-
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
+.. toctree::
+   :hidden:
+
+   License <license>
+
+

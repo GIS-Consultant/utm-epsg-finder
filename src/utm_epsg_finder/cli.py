@@ -1,31 +1,17 @@
-"""
-Module that contains the command line app.
+"""Console script for utm-epsg-finder."""
+import click
 
-Why does this file exist, and why not put this in __main__?
-
-  You might be tempted to import things from __main__ later, but that will cause
-  problems: the code will get executed twice:
-
-  - When you run `python -mutm_epsg_finder` python will execute
-    ``__main__.py`` as a script. That means there won't be any
-    ``utm_epsg_finder.__main__`` in ``sys.modules``.
-  - When you import __main__ it will get executed again (as a module) because
-    there's no ``utm_epsg_finder.__main__`` in ``sys.modules``.
-
-  Also see (1) from http://click.pocoo.org/5/setuptools/#setuptools-integration
-"""
-import sys
+from utm_epsg_finder import __version__
 
 
-def main(argv=sys.argv):
-    """
-    Args:
-        argv (list): List of arguments
-
-    Returns:
-        int: A return code
-
-    Does stuff.
-    """
-    print(argv)
+@click.command()
+@click.version_option(version=__version__)
+def main() -> int:
+    """Console script for utm-epsg-finder."""
+    click.echo("Replace this message by putting your code into utm_epsg_finder.cli.main")
+    click.echo("See click documentation at https://click.palletsprojects.com/")
     return 0
+
+
+if __name__ == "__main__":
+    main()  # pragma: no cover

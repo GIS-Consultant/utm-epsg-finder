@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use UTM EPSG Finder in a project::
+To use utm-epsg-finder in a project::
 
-	import utm_epsg_finder
+    import utm_epsg_finder
