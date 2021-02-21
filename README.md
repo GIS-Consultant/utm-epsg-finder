@@ -15,7 +15,7 @@
 Python Boilerplate contains all the boilerplate you need to create a modern Python package.
 
 
-* GitHub repo: <https://github.com/MaxDragonheart/utm-epsg-finder.git>
+* GitHub repo: <https://github.com/GIS-Consultant/utm-epsg-finder.git>
 * Documentation: <https://utm-epsg-finder.readthedocs.io>
 * Free software: MIT
 
