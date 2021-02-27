@@ -2,7 +2,7 @@
 [tool.poetry]
 name = "utm-epsg-finder"
 version = "0.0.2"
-description = "Find UTM EPSG code from any geometry."
+description = "Python Boilerplate contains all the boilerplate you need to create a modern Python package."
 authors = ["Massimiliano Moraca <info@massimilianomoraca.it>"]
 
 readme = "README.md"
@@ -13,9 +13,9 @@ keywords = ["utm-epsg-finder"]
 classifiers=[
     "Development Status :: 2 - Pre-Alpha",
     "Intended Audience :: Developers",
-    
+
     "License :: OSI Approved :: MIT License",
-    
+
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.6",
@@ -38,6 +38,8 @@ utm-epsg-finder = 'utm_epsg_finder.cli:main'
 python = "<3.10,>=3.6.1"
 
 click = "^7.1.2"
+pathlib = "^1.0.1"
+pyproj = "^3.0.0"
 geopandas = "^0.8.2"
 utm = "^0.7.0"
 

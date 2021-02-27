@@ -6,7 +6,7 @@
 [![PyPI - License](https://img.shields.io/pypi/l/utm-epsg-finder.svg)](https://pypi.python.org/pypi/utm-epsg-finder)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/utm-epsg-finder.svg)](https://pypi.python.org/pypi/utm-epsg-finder)
 [![Tests](https://github.com/GIS-Consultant/utm-epsg-finder/workflows/tests/badge.svg)](https://github.com/GIS-Consultant/utm-epsg-finder/actions?workflow=tests)
-[![Codecov](https://codecov.io/gh/GIS-Consultant/utm-epsg-finder/branch/main/graph/badge.svg)](https://codecov.io/gh/GIS-Consultant/utm-epsg-finder)
+[![codecov](https://codecov.io/gh/GIS-Consultant/utm-epsg-finder/branch/master/graph/badge.svg?token=CFA8VDHT8W)](https://codecov.io/gh/GIS-Consultant/utm-epsg-finder)
 [![Read the Docs](https://readthedocs.org/projects/utm-epsg-finder/badge/)](https://utm-epsg-finder.readthedocs.io/)
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)

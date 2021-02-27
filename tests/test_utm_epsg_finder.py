@@ -1,17 +1,12 @@
 """Tests for `utm_epsg_finder` module."""
-from typing import Generator
+from pathlib import Path
 
-import pytest
+from utm_epsg_finder.utm_epsg_finder import polygon_find_utm_epsg
 
-import utm_epsg_finder
-
-
-@pytest.fixture
-def version() -> Generator[str, None, None]:
-    """Sample pytest fixture."""
-    yield utm_epsg_finder.__version__
+input_data_path = Path(__file__).parent.parent.parent.parent
+input_vector = str(input_data_path / "test-data/input-data/atrani/atrani.geojson")
 
 
-def test_version(version: str) -> None:
-    """Sample pytest test function with the pytest fixture as an argument."""
-    assert version == "0.0.2"
+def test_polygon_find_utm_epsg(tmp_path: Path) -> None:
+    """Test on polygon_find_utm_epsg."""
+    polygon_find_utm_epsg(vector_path=input_vector)
