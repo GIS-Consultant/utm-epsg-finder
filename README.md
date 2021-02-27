@@ -12,21 +12,20 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 
-Python Boilerplate contains all the boilerplate you need to create a modern Python package.
+**UTM EPSG Finder** allow the user to find the UTM's [EPSG](https://epsg.org/home.html) code from his vectors in [EPSG:4326](http://epsg.io/4326) and [ESPG:3857](http://epsg.io/3857).
+Sometimes is useful to know the projected EPSG; as example when you will calculate the polygon's area or the distance between two points. In this case if your vectors are in 4326 or worst in 3857
+you can't return a correct value. Remember that with Pseudo-Mercator is not optimal calculate area but if you use an UTM EPSG the output value from area calculation is more correct.
 
+**UTM EPSG Finder** is based on:
+- [utm](https://pypi.org/project/utm/)
+- [GeoPandas](https://pypi.org/project/geopandas/)
+- [pyproj](https://pypi.org/project/pyproj/)
 
+---
 * GitHub repo: <https://github.com/GIS-Consultant/utm-epsg-finder.git>
 * Documentation: <https://utm-epsg-finder.readthedocs.io>
 * Free software: MIT
 
-
-## Features
-
-* TODO
-
-## Quickstart
-
-TODO
 
 ## Credits
 
@@ -34,3 +33,5 @@ This package was created with [Cookiecutter][cookiecutter] and the [fedejaure/co
 
 [cookiecutter]: https://github.com/cookiecutter/cookiecutter
 [cookiecutter-modern-pypackage]: https://github.com/fedejaure/cookiecutter-modern-pypackage
+
+Thanks to [g2giovanni](https://github.com/g2giovanni) for the help to setting up the package.

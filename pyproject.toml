@@ -42,6 +42,7 @@ pathlib = "^1.0.1"
 pyproj = "^3.0.0"
 geopandas = "^0.8.2"
 utm = "^0.7.0"
+twine = "^3.3.0"
 
 
 [tool.poetry.dev-dependencies]
