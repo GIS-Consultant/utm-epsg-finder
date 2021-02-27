@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2021-02-27
+
 ## [0.0.2] - 2021-02-21
 ### Added
 - First release on PyPI.
 
-[Unreleased]: https://github.com/GIS-Consultant/utm-epsg-finder/compare/v0.0.2...HEAD
+[Unreleased]: https://github.com/GIS-Consultant/utm-epsg-finder/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/GIS-Consultant/utm-epsg-finder/compare/v0.0.2...v0.1.0
 [0.0.2]: https://github.com/GIS-Consultant/utm-epsg-finder/compare/releases/tag/v0.0.2
