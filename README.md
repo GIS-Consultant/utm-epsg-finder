@@ -22,10 +22,10 @@ you can't return a correct value. Remember that with Pseudo-Mercator is not opti
 
 
 ## Feature
-- [x] Get UTN EPSG for lines
+- [x] Get UTM EPSG for lines
 - [x] Get UTM EPSG for points
 - [x] Get UTM EPSG for polygons
-- [x] Get UTN EPSG for raster
+- [x] Get UTM EPSG for raster
 
 ## More
 * GitHub repo: <https://github.com/GIS-Consultant/utm-epsg-finder.git>
