@@ -1,27 +1,27 @@
 """Main module."""
-import geopandas as gpd
+import geopandas
+import rasterio
 import utm
 from pyproj import CRS
+from shapely.geometry import Polygon
 
 
-def line_find_utm_epsg(vector_path: str) -> str:
+def line_find_utm_epsg(input_data_path: str) -> str:
     """Find EPSG code of the line's centroid.
 
     If line's EPSG is 4326 or 3857 it will reprojected
-    into its relative UTM EPSG. Since with Pseudo-Mercator
-    is not optimal calculate distances, it is appropriate to
-    reproject polygon in its UTM EPSG.
+    into its relative UTM EPSG.
 
     Args:
-        vector_path: String path.
+        input_data_path: String path.
 
     Returns:
         String.
     """
-    if type(vector_path) is not gpd.geodataframe.GeoDataFrame:
-        input_vector = gpd.read_file(vector_path)
+    if type(input_data_path) is not geopandas.geodataframe.GeoDataFrame:
+        input_vector = geopandas.read_file(input_data_path)
     else:
-        input_vector = vector_path
+        input_vector = input_data_path
 
     # Check if vector_in's EPSG is 4326 or 3857
     if input_vector.crs == "epsg:4326" or input_vector.crs == "epsg:3857":
@@ -50,24 +50,22 @@ def line_find_utm_epsg(vector_path: str) -> str:
         return epsg
 
 
-def polygon_find_utm_epsg(vector_path: str) -> str:
+def polygon_find_utm_epsg(input_data_path: str) -> str:
     """Find EPSG code of the polygon's centroid.
 
     If polygon's EPSG is 4326 or 3857 it will reprojected
-    into its relative UTM EPSG. Since with Pseudo-Mercator
-    is not optimal calculate area, it is appropriate to
-    reproject polygon in its UTM EPSG.
+    into its relative UTM EPSG.
 
     Args:
-        vector_path: String path.
+        input_data_path: String path.
 
     Returns:
         String.
     """
-    if type(vector_path) is not gpd.geodataframe.GeoDataFrame:
-        input_vector = gpd.read_file(vector_path)
+    if type(input_data_path) is not geopandas.geodataframe.GeoDataFrame:
+        input_vector = geopandas.read_file(input_data_path)
     else:
-        input_vector = vector_path
+        input_vector = input_data_path
 
     # Check if vector_in's EPSG is 4326 or 3857
     if input_vector.crs == "epsg:4326" or input_vector.crs == "epsg:3857":
@@ -95,3 +93,36 @@ def polygon_find_utm_epsg(vector_path: str) -> str:
     else:
         epsg = input_vector.crs
         return epsg
+
+
+def raster_find_utm_epsg(input_data_path: str) -> str:
+    """Find EPSG code of the raster's centroid.
+
+    If raster's EPSG is 4326 or 3857 it will reprojected
+    into its relative UTM EPSG.
+
+    Args:
+        input_data_path: String path.
+
+    Returns:
+        String.
+    """
+    if type(input_data_path) is not rasterio.io.DatasetReader:
+        raster_in = rasterio.open(input_data_path)
+    else:
+        raster_in = input_data_path
+
+    # Get raster boundary box coordinates
+    bbox = raster_in.bounds
+
+    # Create coordinate arrays
+    lat_list = [bbox.bottom, bbox.top, bbox.bottom]
+    lon_list = [bbox.left, bbox.right, bbox.left]
+
+    # Create polygon and covert it into GeoDataFrame
+    polygon_bbox = Polygon(zip(lon_list, lat_list))
+    gdf = geopandas.GeoDataFrame(geometry=[polygon_bbox], crs=raster_in.crs)
+
+    # Get EPSG
+    epsg = polygon_find_utm_epsg(gdf)
+    return epsg

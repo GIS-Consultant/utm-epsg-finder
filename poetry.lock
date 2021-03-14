@@ -1,4 +1,15 @@
 [[package]]
+name = "affine"
+version = "2.3.0"
+description = "Matrices describing affine transformation of the plane."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+test = ["pytest (>=3.0)", "pytest-cov", "pydocstyle", "coveralls"]
+
+[[package]]
 name = "alabaster"
 version = "0.7.12"
 description = "A configurable sidebar-enabled Sphinx theme"
@@ -926,6 +937,32 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
 
 [[package]]
+name = "rasterio"
+version = "1.2.1"
+description = "Fast and direct raster I/O for use with Numpy and SciPy"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+affine = "*"
+attrs = "*"
+certifi = "*"
+click = ">=4.0,<8"
+click-plugins = "*"
+cligj = ">=0.5"
+numpy = "*"
+snuggs = ">=1.4.1"
+
+[package.extras]
+all = ["packaging", "pytest (>=2.8.2)", "sphinx", "pytest-cov (>=2.2.0)", "hypothesis", "numpydoc", "ipython (>=2.0)", "matplotlib", "ghp-import", "boto3 (>=1.2.4)", "shapely", "sphinx-rtd-theme"]
+docs = ["ghp-import", "numpydoc", "sphinx", "sphinx-rtd-theme"]
+ipython = ["ipython (>=2.0)"]
+plot = ["matplotlib"]
+s3 = ["boto3 (>=1.2.4)"]
+test = ["boto3 (>=1.2.4)", "hypothesis", "packaging", "pytest-cov (>=2.2.0)", "pytest (>=2.8.2)", "shapely"]
+
+[[package]]
 name = "readme-renderer"
 version = "29.0"
 description = "readme_renderer is a library for rendering \"readme\" descriptions for Warehouse"
@@ -1065,6 +1102,21 @@ description = "This package provides 29 stemmers for 28 languages generated from
 category = "dev"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "snuggs"
+version = "1.4.7"
+description = "Snuggs are s-expressions for Numpy"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+numpy = "*"
+pyparsing = ">=2.1.6"
+
+[package.extras]
+test = ["pytest", "hypothesis"]
 
 [[package]]
 name = "sphinx"
@@ -1332,9 +1384,13 @@ testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.10,>=3.6.1"
-content-hash = "cba37f1b57935530bdca5f626e39c72fde0e5f05e309d47ba7873fbabbbf3124"
+content-hash = "407c0c237852ed83542cf2f18838d630dde1421e26ba0f2d9b24811019fea778"
 
 [metadata.files]
+affine = [
+    {file = "affine-2.3.0-py2.py3-none-any.whl", hash = "sha256:34b05b070d954c382e56f02c207a372d8a32621a87653cc30cdd31cd7f65799f"},
+    {file = "affine-2.3.0.tar.gz", hash = "sha256:2e045def1aa29e613c42e801a7e10e0b9bacfed1a7c6af0cadf8843530a15102"},
+]
 alabaster = [
     {file = "alabaster-0.7.12-py2.py3-none-any.whl", hash = "sha256:446438bdcca0e05bd45ea2de1668c1d9b032e1a9154c2c259092d77031ddd359"},
     {file = "alabaster-0.7.12.tar.gz", hash = "sha256:a661d72d58e6ea8a57f7a86e37d86716863ee5e92788398526d58b26a4e4dc02"},
@@ -1900,6 +1956,17 @@ pyyaml = [
     {file = "PyYAML-5.4.1-cp39-cp39-win_amd64.whl", hash = "sha256:c20cfa2d49991c8b4147af39859b167664f2ad4561704ee74c1de03318e898db"},
     {file = "PyYAML-5.4.1.tar.gz", hash = "sha256:607774cbba28732bfa802b54baa7484215f530991055bb562efbed5b2f20a45e"},
 ]
+rasterio = [
+    {file = "rasterio-1.2.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:d9c9e7a968ef8b89700d3a14497ac61c6178e8342a2cbf717d725d85404d8e97"},
+    {file = "rasterio-1.2.1-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:441b0e95ee89d100ab8db950c2de7ba57632f8d8940cc9a5592f0f87d6e36f0c"},
+    {file = "rasterio-1.2.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:907686a165877c7133b283c2dee57fa52b4bbcdc622bb455b005cacd16dba411"},
+    {file = "rasterio-1.2.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:c6103e58494f97e309a1dc6034c4df26006a12414a82f96d35c5420b79e2c4c9"},
+    {file = "rasterio-1.2.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:35dd649effb1acd7ae1fb263dfa95f21d83bb5e20b195012249a32f4f5661d38"},
+    {file = "rasterio-1.2.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:c72741e681863fc505812252a696b4983f22733aefc00cc6ae5f22ab241c7064"},
+    {file = "rasterio-1.2.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:538ebcf0d0978cef446efa9610f9651348b166b5cbc0d83d93b628e4e4daff32"},
+    {file = "rasterio-1.2.1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:f255a98673b1bf52eb439c25bf6340c833e606fb48cea36bb82e341f67d84db4"},
+    {file = "rasterio-1.2.1.tar.gz", hash = "sha256:81d4181514c67dc660d7b8cf943ad55c4fb3e0a17ac893d92628ac928cfab3d8"},
+]
 readme-renderer = [
     {file = "readme_renderer-29.0-py2.py3-none-any.whl", hash = "sha256:63b4075c6698fcfa78e584930f07f39e05d46f3ec97f65006e430b595ca6348c"},
     {file = "readme_renderer-29.0.tar.gz", hash = "sha256:92fd5ac2bf8677f310f3303aa4bce5b9d5f9f2094ab98c29f13791d7b805a3db"},
@@ -2006,6 +2073,10 @@ smmap = [
 snowballstemmer = [
     {file = "snowballstemmer-2.1.0-py2.py3-none-any.whl", hash = "sha256:b51b447bea85f9968c13b650126a888aabd4cb4463fca868ec596826325dedc2"},
     {file = "snowballstemmer-2.1.0.tar.gz", hash = "sha256:e997baa4f2e9139951b6f4c631bad912dfd3c792467e2f03d7239464af90e914"},
+]
+snuggs = [
+    {file = "snuggs-1.4.7-py3-none-any.whl", hash = "sha256:988dde5d4db88e9d71c99457404773dabcc7a1c45971bfbe81900999942d9f07"},
+    {file = "snuggs-1.4.7.tar.gz", hash = "sha256:501cf113fe3892e14e2fee76da5cd0606b7e149c411c271898e6259ebde2617b"},
 ]
 sphinx = [
     {file = "Sphinx-3.5.1-py3-none-any.whl", hash = "sha256:e90161222e4d80ce5fc811ace7c6787a226b4f5951545f7f42acf97277bfc35c"},

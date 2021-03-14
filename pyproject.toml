@@ -43,6 +43,7 @@ pyproj = "^3.0.0"
 geopandas = "^0.8.2"
 utm = "^0.7.0"
 twine = "^3.3.0"
+rasterio = "^1.2.1"
 
 
 [tool.poetry.dev-dependencies]
