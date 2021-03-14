@@ -14,13 +14,18 @@ Sometimes is useful to know the projected EPSG; as example when you will calcula
 you can't return a correct value. Remember that with Pseudo-Mercator is not optimal calculate area but if you use an UTM EPSG the output value from area calculation is more correct.
 
 **UTM EPSG Finder** is based on:
-- [utm](https://pypi.org/project/utm/)
 - [GeoPandas](https://pypi.org/project/geopandas/)
 - [pyproj](https://pypi.org/project/pyproj/)
+- [shapely](https://shapely.readthedocs.io/en/latest/project.html)  
+- [rasterio](https://rasterio.readthedocs.io/en/latest/index.html)
+- [utm](https://pypi.org/project/utm/)
+
 
 ## Feature
+- [x] Get UTN EPSG for lines
+- [x] Get UTM EPSG for points
 - [x] Get UTM EPSG for polygons
-- [ ] Get UTN EPSG for lines
+- [x] Get UTN EPSG for raster
 
 ## More
 * GitHub repo: <https://github.com/GIS-Consultant/utm-epsg-finder.git>
